@@ -32,6 +32,10 @@ class Kid {
         this.name = name;
     }
 
+    public String toString() {
+        return getName() + ":" + getAge();
+    }
+
 }
 
 class Trampoline {
@@ -43,27 +47,66 @@ class Trampoline {
         wainting = new ArrayList<>();
     }
 
-    
+    public void arrive(Kid kid) {
+        wainting.addFirst(kid);
+    }
 
+    public void enter() {
+        playing.addFirst(wainting.get(wainting.size()-1));
+        wainting.remove(wainting.size()-1);
+    }
+
+    public void leave(){
+        if(playing.size() > 0) {
+            wainting.addFirst(playing.get(playing.size()-1));
+            playing.remove(playing.size()-1);
+        }
+    }
+
+    public Kid removeKid(String name) {
+        if (playing.size() > 0) {
+            for (int i = 0; i < playing.size(); i++) {
+                if(playing.get(i).getName().equals(name)) {
+                    Kid temp = playing.get(i);
+                    playing.remove(i);
+                    return temp;
+                }
+            }  
+        }
+        if (wainting.size() > 0) {
+            for (int i = 0; i < wainting.size(); i++) {
+                if(wainting.get(i).getName().equals(name)) {
+                    Kid temp = wainting.get(i);
+                    wainting.remove(i);
+                    return temp;
+                }
+            }
+        }
+        return null;
+    }
+
+    public String toString() {
+        return wainting + " => " + playing;
+    }
 }
 
 
 class Adapter {
-    // Trampoline tr = new Trampoline();
+    Trampoline tr = new Trampoline();
     public void arrive(String name, int age) {
-        // tr.arrive(new Kid(name, age));
+        tr.arrive(new Kid(name, age));
     }
     public void enter() {
-        // tr.enter();
+        tr.enter();
     }
     public void leave() {
-        // tr.leave();
+        tr.leave();
     }
     public void remove(String name) {
-        // tr.removeKid(name);
+        tr.removeKid(name);
     }
     public void show() {
-        // System.out.println(tr.toString());
+        System.out.println(tr.toString());
     }
 
 }

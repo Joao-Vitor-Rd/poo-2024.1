@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2024-12-09_23-29-40",
+            "content": "@@ -1123,35 +1123,35 @@\n  %7B%0A        for (\n-int\n+for\n  i = 0; i %3C play\n@@ -1373,19 +1373,19 @@\n    for (\n-int\n+for\n  i = 0; \n"
+        },
+        {
+            "label": "2024-12-09_23-29-57",
+            "content": "@@ -1150,24 +1150,27 @@\n i %3C playing.\n+get\n size(); i++)\n@@ -1393,24 +1393,27 @@\n  %3C wainting.\n+get\n size(); i++)\n"
+        },
+        {
+            "label": "2024-12-09_23-30-21",
+            "content": "@@ -830,137 +830,25 @@\n     \n-ArrayList%3CKid%3E adiconar = new ArrayList%3C%3E();%0A        adiconar.add(kid);%0A        adiconar.add(playing);%0A        playing = adiconar\n+wainting.add(kid)\n ;%0A  \n@@ -1690,12 +1690,10 @@\n  + %22\n- \n =%3E\n- \n %22 + \n"
+        },
+        {
+            "label": "2024-12-09_23-33-53",
+            "content": "@@ -1013,11 +1013,8 @@\n .add\n-All\n (wai\n"
+        },
+        {
+            "label": "2024-12-09_23-34-06",
+            "content": "@@ -922,11 +922,8 @@\n .add\n-All\n (pla\n@@ -1009,16 +1009,19 @@\n ying.add\n+All\n (waintin\n"
+        },
+        {
+            "label": "2024-12-09_23-34-24",
+            "content": "@@ -951,53 +951,19 @@\n ying\n-.removeAll();%0A        playing.addAll(\n+ = \n adiconar\n );%0A \n@@ -958,17 +958,16 @@\n adiconar\n-)\n ;%0A    %7D%0A\n"
+        },
+        {
+            "label": "2024-12-09_23-35-20",
+            "content": "@@ -952,13 +952,17 @@\n ing.\n-clear\n+removeAll\n ();%0A\n"
+        },
+        {
+            "label": "2024-12-09_23-37-45",
+            "content": "@@ -826,28 +826,169 @@\n         \n-waint\n+ArrayList%3CKid%3E adiconar = new ArrayList%3C%3E();%0A        adiconar.add(kid);%0A        adiconar.addAll(playing);%0A        playing.clear();%0A        play\n ing.add\n+All\n (adicona\n"
+        },
+        {
+            "label": "2024-12-10_07-52-15",
+            "content": "@@ -839,19 +839,24 @@\n ing.add(\n-kid\n+adiconar\n );%0A    %7D\n"
+        },
+        {
+            "label": "2024-12-10_07-52-25",
+            "content": "@@ -822,142 +822,8 @@\n ) %7B%0A\n-        for (Kid kid : playing) %7B%0A            Kid temp = kid;%0A            playing.remove(0);%0A            playing.add(temp);%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-10_07-54-28",
+            "content": "@@ -836,16 +836,18 @@\n r (Kid k\n+id\n  : playi\n@@ -876,16 +876,18 @@\n temp = k\n+id\n ;%0A      \n"
+        },
+        {
+            "label": "2024-12-10_07-54-41",
+            "content": "@@ -822,35 +822,8 @@\n ) %7B%0A\n-        wainting.add(kid);%0A\n     \n@@ -940,32 +940,59 @@\n emp);%0A        %7D%0A\n+        wainting.add(kid);%0A\n     %7D%0A%0A    publi\n"
+        },
+        {
+            "label": "2024-12-10_07-55-14",
+            "content": "@@ -958,32 +958,20 @@\n ing.add(\n-playing.size()-1\n+temp\n );%0A     \n"
+        },
+        {
+            "label": "2024-12-10_07-55-40",
+            "content": "@@ -842,18 +842,156 @@\n .add\n-Fist\n (kid);\n+%0A        for (Kid k : playing) %7B%0A            Kid temp = k;%0A            playing.remove(0);%0A            playing.add(playing.size()-1);%0A        %7D\n %0A   \n"
+        },
+        {
+            "label": "2024-12-10_07-56-35",
+            "content": "@@ -842,10 +842,10 @@\n .add\n-La\n+Fi\n st(k\n"
+        },
+        {
+            "label": "2024-12-10_07-57-34",
+            "content": "@@ -842,11 +842,10 @@\n .add\n-Fir\n+La\n st(k\n"
+        },
+        {
+            "label": "2024-12-10_07-57-50",
+            "content": "@@ -887,87 +887,8 @@\n ) %7B%0A\n-        for (Kid kid : playing) %7B%0A            System.out.println(k);%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-10_08-00-01",
+            "content": "@@ -949,18 +949,16 @@\n rintln(k\n-id\n );%0A     \n"
+        },
+        {
+            "label": "2024-12-10_08-00-12",
+            "content": "@@ -875,32 +875,70 @@\n  void enter() %7B%0A\n+        for (Kid kid : playing) %7B%0A    \n         System.o\n@@ -952,14 +952,23 @@\n tln(\n-%22AA%22);\n+kid);%0A        %7D\n %0A   \n"
+        },
+        {
+            "label": "2024-12-10_08-00-54",
+            "content": "@@ -910,31 +910,20 @@\n println(\n-wainting.get(0)\n+%22AA%22\n );%0A     \n"
+        },
+        {
+            "label": "2024-12-10_08-01-25",
+            "content": "@@ -895,32 +895,64 @@\n     \n-playing.add(wainting.get\n+System.out.println(wainting.get(0));%0A        playing.add\n (wai\n@@ -953,32 +953,29 @@\n dd(wainting.\n-size()-1\n+get(0\n ));%0A        \n@@ -994,25 +994,9 @@\n ove(\n-wainting.size()-1\n+0\n );%0A \n"
+        },
+        {
+            "label": "2024-12-10_08-02-27",
+            "content": "@@ -902,21 +902,16 @@\n ying.add\n-First\n (waintin\n@@ -1033,21 +1033,16 @@\n ting.add\n-First\n (playing\n"
+        },
+        {
+            "label": "2024-12-10_08-04-19",
+            "content": "@@ -1169,46 +1169,8 @@\n ) %7B%0A\n-        if (playing.size() %3E 0) %7B%0A    \n     \n@@ -1208,36 +1208,32 @@\n .size(); i++) %7B%0A\n-    \n             if(p\n@@ -1264,36 +1264,32 @@\n equals(name)) %7B%0A\n-    \n                 \n@@ -1327,28 +1327,24 @@\n             \n-    \n playing.remo\n@@ -1358,36 +1358,32 @@\n                 \n-    \n return temp;%0A   \n@@ -1383,36 +1383,32 @@\n mp;%0A            \n- \n-   \n %7D%0A            %7D \n@@ -1405,65 +1405,11 @@\n     \n-    %7D  %0A        %7D%0A        if (wainting.size() %3E 0) %7B%0A    \n+%7D%0A%0A\n     \n@@ -1448,36 +1448,32 @@\n .size(); i++) %7B%0A\n-    \n             if(w\n@@ -1521,36 +1521,32 @@\n                 \n-   \n- \n Kid temp = waint\n@@ -1569,28 +1569,24 @@\n             \n-    \n wainting.rem\n@@ -1585,36 +1585,32 @@\n ting.remove(i);%0A\n-    \n                 \n@@ -1622,34 +1622,16 @@\n n temp;%0A\n-                %7D%0A\n         \n@@ -1638,32 +1638,33 @@\n     %7D%0A        %7D%0A\n+%0A\n         return n\n"
+        },
+        {
+            "label": "2024-12-10_08-06-24",
+            "content": "@@ -1022,45 +1022,8 @@\n ()%7B%0A\n-        if(playing.size() %3E 0) %7B%0A    \n     \n@@ -1076,36 +1076,32 @@\n ()-1));%0A        \n-    \n playing.remove(p\n@@ -1118,26 +1118,16 @@\n e()-1);%0A\n-        %7D%0A\n     %7D%0A%0A \n"
+        },
+        {
+            "label": "2024-12-10_08-10-09",
+            "content": "import java.lang.reflect.Array;\nimport java.util.ArrayList;\nimport java.util.Scanner;\n\nclass Kid {\n\n    int age;\n    String name;\n\n    public Kid(String name, int age) {\n        setName(name);\n        setAge(age);\n    }\n\n    public int getAge() {\n        return age;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n\n    public void setAge(int age) {\n        if(age < 0) {\n            return;\n        }\n        this.age = age;\n    }\n\n    public void setName(String name) {\n        this.name = name;\n    }\n\n    public String toString() {\n        return getName() + \":\" + getAge();\n    }\n\n}\n\nclass Trampoline {\n    ArrayList<Kid> playing;\n    ArrayList<Kid> wainting;\n\n    public Trampoline() {\n        playing = new ArrayList<>();\n        wainting = new ArrayList<>();\n    }\n\n    public void arrive(Kid kid) {\n        wainting.addFirst(kid);\n    }\n\n    public void enter() {\n        playing.addFirst(wainting.get(wainting.size()-1));\n        wainting.remove(wainting.size()-1);\n    }\n\n    public void leave(){\n        if(playing.size() > 0) {\n            wainting.addFirst(playing.get(playing.size()-1));\n            playing.remove(playing.size()-1);\n        }\n    }\n\n    public Kid removeKid(String name) {\n        if (playing.size() > 0) {\n            for (int i = 0; i < playing.size(); i++) {\n                if(playing.get(i).getName().equals(name)) {\n                    Kid temp = playing.get(i);\n                    playing.remove(i);\n                    return temp;\n                }\n            }  \n        }\n        if (wainting.size() > 0) {\n            for (int i = 0; i < wainting.size(); i++) {\n                if(wainting.get(i).getName().equals(name)) {\n                    Kid temp = wainting.get(i);\n                    wainting.remove(i);\n                    return temp;\n                }\n            }\n        }\n        return null;\n    }\n\n    public String toString() {\n        return wainting + \" => \" + playing;\n    }\n}\n\n\nclass Adapter {\n    Trampoline tr = new Trampoline();\n    public void arrive(String name, int age) {\n        tr.arrive(new Kid(name, age));\n    }\n    public void enter() {\n        tr.enter();\n    }\n    public void leave() {\n        tr.leave();\n    }\n    public void remove(String name) {\n        tr.removeKid(name);\n    }\n    public void show() {\n        System.out.println(tr.toString());\n    }\n\n}\n\npublic class Shell {\n    public static void main(String[] _args) {\n        Adapter adp = new Adapter();\n        while(true) {\n            System.out.print(\"$\");\n            var line = input();\n            var args = line.split(\" \");\n\n            write(line);\n            if     (args[0].equals(\"end\"))    { break;                                      }\n            else if(args[0].equals(\"arrive\")) { adp.arrive(args[1],(int) number(args[2])) ; }\n            else if(args[0].equals(\"enter\"))  { adp.enter();                                }\n            else if(args[0].equals(\"leave\"))  { adp.leave();                                }\n            else if(args[0].equals(\"remove\")) { adp.remove(args[1]);                        }\n            else if(args[0].equals(\"show\"))   { adp.show();                                 }\n            else                              { write(\"fail: comando invalido\");      }\n        }\n    }\n\n    private static Scanner scanner = new Scanner(System.in);\n    private static String input() { return scanner.nextLine(); }\n    private static double number(String value) { return Double.parseDouble(value); }\n    private static void write(String value) { System.out.println(value); }\n}\n"
+        }
+    ]
+}

@@ -15,6 +15,7 @@ tasks:
   grafite: 0:2:100
   motoca: 0:2:100
   tamagotchi: '10:0:0'
+  pula-pula: 0:0:100
 flags:
   minimum: 0
   reward: 0
@@ -24,4 +25,4 @@ flags:
   devel: 0
 new_items: []
 lang: java
-index: motoca
+index: pula-pula

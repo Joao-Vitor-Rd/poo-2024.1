@@ -1,0 +1,48 @@
+{
+    "patches": [
+        {
+            "label": "2024-12-09_13-54-42",
+            "content": "@@ -85,17 +85,8 @@\n oto(\n-int power\n ) %7B%0A\n@@ -109,21 +109,17 @@\n encia = \n-power\n+1\n ;%0A      \n"
+        },
+        {
+            "label": "2024-12-09_13-58-50",
+            "content": "@@ -210,17 +210,17 @@\n inserir(\n-P\n+p\n essoa pe\n@@ -423,17 +423,17 @@\n  public \n-P\n+p\n essoa re\n"
+        },
+        {
+            "label": "2024-12-09_13-59-25",
+            "content": "@@ -1400,107 +1400,34 @@\n %22P%22)\n-;%0A        for(int i = 0; i %3C this.potencia; i++) %7B%0A            sb.append(%22e%22);%0A        %7D%0A        sb\n+.append(e * this.potencia)\n .app\n"
+        },
+        {
+            "label": "2024-12-09_14-02-09",
+            "content": "@@ -1674,18 +1674,16 @@\n toString\n-()\n  + %22)%22;%0A\n"
+        },
+        {
+            "label": "2024-12-09_14-02-27",
+            "content": "@@ -1581,143 +1581,8 @@\n ) %7B%0A\n-        if(this.pessoa == null) %7B%0A            return %22power:%22 + this.potencia + %22, time:%22 + this.time + %22, person: (empty)%22;%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_14-04-28",
+            "content": "@@ -1691,16 +1691,17 @@\n  person:\n+ \n (empty)%22\n"
+        },
+        {
+            "label": "2024-12-09_14-04-47",
+            "content": "@@ -1787,16 +1787,17 @@\n  person:\n+ \n (%22 + pes\n"
+        },
+        {
+            "label": "2024-12-09_14-05-03",
+            "content": "@@ -573,44 +573,8 @@\n   %7D%0A\n-        Pessoa pessoaSaiu = pessoa;%0A\n     \n@@ -617,12 +617,8 @@\n ssoa\n-Saiu\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-09_14-07-08",
+            "content": "@@ -1034,9 +1034,9 @@\n e() \n-%3E\n+%3C\n  10)\n"
+        },
+        {
+            "label": "2024-12-09_14-08-34",
+            "content": "@@ -1219,17 +1219,16 @@\n ed after\n- \n %22 + this\n@@ -1236,17 +1236,16 @@\n time + %22\n- \n minutes%22\n"
+        },
+        {
+            "label": "2024-12-09_14-08-55",
+            "content": "public class Moto {\n    int potencia;\n    int time;\n    Pessoa pessoa;\n\n    public Moto(int power) {\n        this.potencia = power;\n        this.time = 0;\n        this.pessoa = null;\n    }\n\n    public boolean inserir(Pessoa pessoa) {\n        if(this.pessoa != null) {\n            System.out.println(\"fail: busy motorcycle\");\n            return false;\n        }\n        this.pessoa = pessoa;\n        return true;\n    }\n\n    public Pessoa remover() {\n        if(this.pessoa == null) {\n            System.out.println(\"fail: empty motorcycle\");\n            return null;\n        }\n        Pessoa pessoaSaiu = pessoa;\n        pessoa = null;\n        return pessoaSaiu;\n    }\n\n    public void buyTime(int time) {\n        this.time += time;\n    }\n\n    public void drive(int time) {\n        if(this.time == 0) {\n            System.out.println(\"fail: buy time first\");\n            return;\n        }\n        if(this.pessoa == null) {\n            System.out.println(\"fail: empty motorcycle\");\n            return;\n        }\n        if(pessoa.getAge() > 10) {\n            System.out.println(\"fail: too old to drive\");\n            return;\n        }\n        if(this.time - time <= 0) {\n            System.out.println(\"fail: time finished after \" + this.time + \" minutes\");\n            this.time = 0;\n            return;\n        }\n        this.time -= time;\n\n    }\n\n    public String honk() {\n        StringBuilder sb = new StringBuilder();\n        sb.append(\"P\");\n        for(int i = 0; i < this.potencia; i++) {\n            sb.append(\"e\");\n        }\n        sb.append(\"m\");\n        return sb.toString();\n    }\n\n    public String toString() {\n        if(this.pessoa == null) {\n            return \"power:\" + this.potencia + \", time:\" + this.time + \", person:(empty)\";\n        }\n        return \"power:\" + this.potencia + \", time:\" + this.time + \", person:(\" + pessoa.toString() + \")\";\n    }\n}"
+        }
+    ]
+}

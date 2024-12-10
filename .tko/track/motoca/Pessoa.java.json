@@ -1,0 +1,12 @@
+{
+    "patches": [
+        {
+            "label": "2024-12-09_13-54-42",
+            "content": "@@ -84,75 +84,12 @@\n soa(\n-String name, int age) %7B%0A        setName(name);%0A        setAge(age);\n+) %7B%0A\n %0A   \n@@ -196,17 +196,17 @@\n  setAge(\n-i\n+I\n nt age) \n"
+        },
+        {
+            "label": "2024-12-09_13-58-50",
+            "content": "public class Pessoa {\n    private int age;\n    private String name;\n\n    public Pessoa(String name, int age) {\n        setName(name);\n        setAge(age);\n    }\n\n    public String toString() {\n        return getName() + \":\" + getAge();\n    }\n\n    public void setAge(int age) {\n        this.age = age;\n    }\n    public void setName(String name) {\n        this.name = name;\n    }\n    public int getAge() {\n        return age;\n    }\n    public String getName() {\n        return name;\n    }\n\n}"
+        }
+    ]
+}

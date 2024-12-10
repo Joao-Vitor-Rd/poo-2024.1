@@ -1,0 +1,132 @@
+{
+    "patches": [
+        {
+            "label": "2024-12-08_09-48-33",
+            "content": "@@ -55,28 +55,62 @@\n c Roupa(\n-) %7B%0A        \n+String tamanho) %7B%0A        setTamanho(tamanho);\n %0A    %7D%0A%0A\n@@ -550,16 +550,20 @@\n oupa r;%0A\n+    \n %0A    pub\n@@ -572,16 +572,30 @@\n c Roupa(\n+String tamanho\n ) %7B%0A    \n@@ -611,24 +611,32 @@\n ew Roupa\n+(tamaho)\n ;%0A    %7D%0A\n     %0A   \n@@ -627,20 +627,16 @@\n ;%0A    %7D%0A\n-    \n %0A    pub\n"
+        },
+        {
+            "label": "2024-12-08_09-50-29",
+            "content": "@@ -559,18 +559,16 @@\n ew Roupa\n-()\n ;%0A    %7D%0A\n"
+        },
+        {
+            "label": "2024-12-08_09-50-55",
+            "content": "@@ -71,23 +71,8 @@\n     \n-tamanho = null;\n %0A   \n"
+        },
+        {
+            "label": "2024-12-08_09-51-15",
+            "content": "@@ -543,23 +543,21 @@\n  public \n-Adapter\n+Roupa\n () %7B%0A   \n"
+        },
+        {
+            "label": "2024-12-08_09-51-43",
+            "content": "@@ -670,23 +670,16 @@\n Tamanho(\n-tamanho\n ));%0A    \n"
+        },
+        {
+            "label": "2024-12-08_09-52-23",
+            "content": "@@ -1,29 +1,4 @@\n-import java.util.Scanner;\n %0Acla\n"
+        },
+        {
+            "label": "2024-12-08_09-53-28",
+            "content": "@@ -663,16 +663,35 @@\n         \n+System.out.println(\n r.setTam\n@@ -703,16 +703,17 @@\n tamanho)\n+)\n ;%0A    %7D%0A\n"
+        },
+        {
+            "label": "2024-12-08_09-53-51",
+            "content": "@@ -749,20 +749,8 @@\n tln(\n-%22size: (%22 + \n r.ge\n@@ -763,14 +763,8 @@\n ho()\n- + %22)%22\n );%0A \n"
+        },
+        {
+            "label": "2024-12-08_09-55-03",
+            "content": "@@ -88,24 +88,39 @@\n ) %7B%0A        \n+tamanho = null;\n %0A    %7D%0A%0A    \n"
+        },
+        {
+            "label": "2024-12-08_09-55-29",
+            "content": "@@ -96,23 +96,8 @@\n     \n-tamanho = null;\n %0A   \n"
+        },
+        {
+            "label": "2024-12-08_09-56-46",
+            "content": "@@ -904,47 +904,8 @@\n n);%0A\n-        while(true) %7B%0A            %0A    \n     \n@@ -933,28 +933,24 @@\n nextLine();%0A\n-    \n         Stri\n@@ -977,20 +977,16 @@\n t(%22 %22);%0A\n-    \n         \n@@ -1018,28 +1018,24 @@\n ();%0A        \n-    \n System.out.p\n@@ -1054,16 +1054,39 @@\n  line);%0A\n+        while(true) %7B%0A%0A\n         \n"
+        },
+        {
+            "label": "2024-12-08_09-57-51",
+            "content": "@@ -106,10 +106,12 @@\n o = \n-%22%22\n+null\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-08_09-58-07",
+            "content": "@@ -465,14 +465,8 @@\n ln(%22\n-fail :\n Valo\n"
+        },
+        {
+            "label": "2024-12-08_09-58-31",
+            "content": "@@ -465,18 +465,18 @@\n ln(%22fail\n-:\n  \n+:\n Valor in\n"
+        },
+        {
+            "label": "2024-12-08_09-58-45",
+            "content": "@@ -399,29 +399,16 @@\n      ) %7B\n-%0A            \n this.tam\n@@ -427,37 +427,15 @@\n ho; \n-%0A            return;%0A        \n+return;\n %7D%0A%0A \n"
+        },
+        {
+            "label": "2024-12-08_10-02-07",
+            "content": "@@ -106,12 +106,10 @@\n o = \n-NULL\n+%22%22\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-08_10-03-27",
+            "content": "@@ -106,12 +106,12 @@\n o = \n-null\n+NULL\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-08_10-03-36",
+            "content": "@@ -106,10 +106,12 @@\n o = \n-%22%22\n+null\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-08_10-03-47",
+            "content": "@@ -431,24 +431,45 @@\n o = tamanho;\n+ %0A            return;\n %0A        %7D%0A%0A\n"
+        },
+        {
+            "label": "2024-12-08_10-04-55",
+            "content": "@@ -440,28 +440,8 @@\n ho;%0A\n-            return;%0A\n     \n"
+        },
+        {
+            "label": "2024-12-08_10-05-08",
+            "content": "@@ -440,54 +440,8 @@\n ho;%0A\n-            System.out.println(this.tamanho);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-08_10-05-40",
+            "content": "@@ -432,24 +432,70 @@\n  = tamanho;%0A\n+            System.out.println(this.tamanho);%0A\n             \n"
+        },
+        {
+            "label": "2024-12-08_10-06-26",
+            "content": "@@ -165,34 +165,15 @@\n urn \n-%22size: (%22 +  \n tamanho\n- + %22)%22\n ;%0A  \n@@ -783,16 +783,28 @@\n println(\n+%22size: (%22 + \n r.getTam\n@@ -809,16 +809,22 @@\n amanho()\n+ + %22)%22\n );%0A    %7D\n"
+        },
+        {
+            "label": "2024-12-08_10-07-13",
+            "content": "@@ -459,56 +459,8 @@\n ho;%0A\n-            System.out.println(r.getTamanho());%0A\n     \n"
+        },
+        {
+            "label": "2024-12-08_10-07-49",
+            "content": "@@ -486,16 +486,18 @@\n println(\n+r.\n getTaman\n"
+        },
+        {
+            "label": "2024-12-08_10-07-57",
+            "content": "@@ -455,16 +455,62 @@\n amanho;%0A\n+            System.out.println(getTamanho());%0A\n         \n@@ -521,16 +521,16 @@\n return;%0A\n-\n         \n@@ -657,17 +657,16 @@\n  Roupa r\n-p\n ;%0A%0A    p\n@@ -692,17 +692,16 @@\n        r\n-p\n  = new R\n@@ -767,17 +767,16 @@\n        r\n-p\n .setTama\n@@ -817,24 +817,24 @@\n id show() %7B%0A\n+\n         Syst\n@@ -849,17 +849,16 @@\n rintln(r\n-p\n .getTama\n"
+        },
+        {
+            "label": "2024-12-08_10-09-16",
+            "content": "@@ -23,22 +23,8 @@\n er;%0A\n-package jovi;%0A\n clas\n"
+        },
+        {
+            "label": "2024-12-08_10-09-50",
+            "content": "@@ -31,12 +31,8 @@\n age \n-poo.\n jovi\n"
+        },
+        {
+            "label": "2024-12-08_10-10-01",
+            "content": "@@ -19,16 +19,33 @@\n canner;%0A\n+package poo.jovi;\n %0Aclass R\n"
+        },
+        {
+            "label": "2024-12-08_10-10-57",
+            "content": "@@ -175,21 +175,16 @@\n : (%22 +  \n-this.\n tamanho \n"
+        },
+        {
+            "label": "2024-12-08_10-11-12",
+            "content": "@@ -953,45 +953,8 @@\n n);%0A\n-        Adapter adp = new Adapter();%0A\n     \n@@ -1065,24 +1065,65 @@\n split(%22 %22);%0A\n+            Adapter adp = new Adapter();%0A\n             \n@@ -1154,29 +1154,16 @@\n  line);%0A\n-            %0A\n         \n"
+        },
+        {
+            "label": "2024-12-08_10-22-44",
+            "content": "import java.util.Scanner;\n\nclass Roupa {\n\n    private String tamanho;\n\n    public Roupa() {\n        tamanho = \"\";\n    }\n\n    public String getTamanho() {\n        return \"size: (\" +  this.tamanho + \")\";\n    }\n\n    public void setTamanho(String tamanho) {\n        if(tamanho.equals(\"PP\") || tamanho.equals(\"P\")\n        || tamanho.equals(\"M\") || tamanho.equals(\"G\") \n        || tamanho.equals(\"GG\") || tamanho.equals(\"GX\")\n        ) {\n            this.tamanho = tamanho;\n            return;\n        }\n\n        System.out.println(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\");\n    }\n}\n\nclass Adapter {\n    private Roupa rp;\n\n    public Adapter() {\n        rp = new Roupa();\n    }\n    \n    public void size(String tamanho) {\n        rp.setTamanho(tamanho);\n    }\n\n    public void show() {\n        System.out.println(rp.getTamanho());\n    }\n}\n\npublic class draft {\n    public static void main(String args[]) {\n        Scanner sc = new Scanner(System.in);\n        Adapter adp = new Adapter();\n        while(true) {\n            \n            String line = sc.nextLine();\n            String arg[] = line.split(\" \");\n            System.out.println(\"$\" + line);\n            \n            if(arg[0].equals(\"show\")){adp.show();}\n            else if(arg[0].equals(\"size\")){adp.size(arg[1]);}\n            else if(arg[0].equals(\"end\")){break;}\n        }\n\n        sc.close();\n    }\n}\n\n"
+        }
+    ]
+}

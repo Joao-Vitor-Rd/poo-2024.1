@@ -1,0 +1,116 @@
+{
+    "patches": [
+        {
+            "label": "2024-12-09_14-09-42",
+            "content": "@@ -50,1852 +50,38 @@\n ate \n-int money;%0A%0A    public Pessoa(String name, int money) %7B%0A        this.name = name;%0A        this.money = money;%0A    %7D%0A%0A%0A    public int getMoney() %7B%0A        return money;%0A    %7D%0A%0A    public String getName() %7B%0A        return name;%0A    %7D%0A%0A    public void setMoney(int money) %7B%0A        this.money = money;%0A    %7D%0A%0A    public String toString() %7B%0A        return getName() + %22:%22 + getMoney();%0A    %7D%0A%7D%0A%0Aclass Moto %7B%0A    private int custo;%0A    private Pessoa motorista;%0A    private Pessoa passageiro;%0A%0A    public void setMotorista(Pessoa motorista) %7B%0A        this.motorista = motorista;%0A    %7D%0A%0A    public void setPassageiro(Pessoa passageiro) %7B%0A        if(motorista == null) %7B%0A            System.out.println(%22fail: nao tem motorista%22);%0A            return;%0A        %7D%0A%0A        this.passageiro = passageiro;%0A    %7D%0A%0A    public void drive(int km) %7B%0A        custo += km;%0A    %7D%0A%0A    public void leavePass() %7B%0A        if(custo %3E passageiro.getMoney()) %7B%0A            motorista.setMoney(custo);%0A            passageiro.setMoney(0);%0A            System.out.println(%22fail: Passenger does not have enough money%22);%0A            System.out.println(passageiro + %22 leave%22);%0A            return;%0A        %7D%0A        motorista.setMoney(custo);%0A        passageiro.setMoney(passageiro.getMoney() - custo);%0A        System.out.println(passageiro + %22 leave%22);%0A%0A    %7D%0A%0A    public String toString() %7B%0A        if(passageiro == null) %7B%0A            return %22Cost: %22 + custo + %22, Driver%22 + motorista+ %22, Passenger: None%22;%0A        %7D %0A        if(motorista == null) %7B%0A            return %22Cost: %22 + custo + %22, Driver: None%22 + %22, Passenger: %22 + passageiro;%0A        %7D%0A        if(passageiro == null && motorista == null) %7B%0A            return %22Cost: %22 + custo + %22, Driver: None, Passenger: None%22;%0A        %7D%0A%0A        return %22Cost: %22 + custo + %22, Driver%22 + motorista + %22, Passenger: %22 + passageiro;%0A    %7D\n+double money;%0A%7D%0A%0Aclass Moto %7B%0A\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2024-12-09_17-17-51",
+            "content": "@@ -1898,453 +1898,8 @@\n %0A%7D%0A%0A\n-class Adapter %7B%0A    private Moto moto;%0A%0A    public Adapter() %7B%0A        moto = new Moto();%0A    %7D%0A%0A    public void setDriver(String nome, int money) %7B%0A        moto.setMotorista(new Pessoa(nome, money));%0A    %7D%0A%0A    public void setPass(String nome, int money) %7B%0A        moto.setPassageiro(new Pessoa(nome, money));%0A    %7D%0A%0A    public void drive(int km) %7B%0A        moto.drive(km);%0A    %7D%0A%0A    public show() %7B%0A        System.out.println(moto);%0A    %7D%0A%0A%7D%0A%0A\n publ\n@@ -1960,24 +1960,24 @@\n gs%5B%5D) %7B%0A\n-\n         \n %0A    %7D%0A%7D\n@@ -1968,16 +1968,45 @@\n         \n+System.out.println(%22qxcode%22);\n %0A    %7D%0A%7D\n"
+        },
+        {
+            "label": "2024-12-09_18-17-35",
+            "content": "@@ -2279,71 +2279,8 @@\n  %7D%0A%0A\n-    public void leavePass() %7B%0A        moto.leavePass();%0A    %7D%0A%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_18-17-50",
+            "content": "@@ -2349,21 +2349,16 @@\n  public \n-void \n show() %7B\n"
+        },
+        {
+            "label": "2024-12-09_18-17-58",
+            "content": "@@ -2398,19 +2398,8 @@\n moto\n-.toString()\n );%0A \n"
+        },
+        {
+            "label": "2024-12-09_18-18-11",
+            "content": "@@ -1,30 +1,4 @@\n-import java.util.Scanner;%0A\n %0Acla\n@@ -2394,16 +2394,27 @@\n tln(moto\n+.toString()\n );%0A    %7D\n@@ -2496,659 +2496,8 @@\n     \n-Scanner sc = new Scanner(System.in);%0A        Adapter adp = new Adapter();%0A%0A        while(true) %7B%0A%0A            String line = sc.nextLine();%0A            String arg%5B%5D = line.split(%22 %22);%0A            System.out.println(%22$%22 + line);%0A%0A            if(arg%5B0%5D.equals(%22setDrive%22))%7Badp.setDriver(arg%5B1%5D, arg%5B2%5D);%7D%0A            else if(arg%5B0%5D.equals(%22setPass%22))%7Badp.setPass(arg%5B1%5D, arg%5B2%5D);%7D  %0A            else if(arg%5B0%5D.equals(%22drive%22))%7Badp.drive(arg%5B1%5D);%7D%0A            else if(arg%5B0%5D.equals(%22leavePass%22))%7Badp.leavePass();%7D  %0A            else if(arg%5B0%5D.equals(%22show%22))%7Badp.show();%7D %0A            else if(arg%5B0%5D.equals(%22end%22))%7Bbreak;%7D %0A%0A        %7D%0A%0A        sc.close();\n %0A   \n"
+        },
+        {
+            "label": "2024-12-09_18-23-42",
+            "content": "@@ -2803,33 +2803,15 @@\n 1%5D, \n-Integer.parseInt(\n arg%5B2%5D)\n-)\n ;%7D%0A \n@@ -2879,33 +2879,15 @@\n 1%5D, \n-Integer.parseInt(\n arg%5B2%5D)\n-)\n ;%7D  \n@@ -2945,33 +2945,15 @@\n ive(\n-Integer.parseInt(\n arg%5B1%5D)\n-)\n ;%7D%0A \n"
+        },
+        {
+            "label": "2024-12-09_18-24-50",
+            "content": "@@ -1432,145 +1432,8 @@\n ) %7B%0A\n-        if(passageiro == null && motorista == null) %7B%0A            return %22Cost: %22 + custo + %22, Driver: None, Passenger: None%22;%0A        %7D%0A\n     \n@@ -1675,32 +1675,169 @@\n geiro;%0A        %7D\n+%0A        if(passageiro == null && motorista == null) %7B%0A            return %22Cost: %22 + custo + %22, Driver: None, Passenger: None%22;%0A        %7D\n %0A%0A        return\n"
+        },
+        {
+            "label": "2024-12-09_18-25-40",
+            "content": "@@ -1637,34 +1637,32 @@\n usto + %22, Driver\n-: \n %22 + motorista+ %22\n@@ -1865,18 +1865,16 @@\n , Driver\n-: \n %22 + moto\n"
+        },
+        {
+            "label": "2024-12-09_18-28-59",
+            "content": "@@ -166,23 +166,26 @@\n     \n-setM\n+this.m\n oney\n-(\n+ = \n money\n-)\n ;%0A  \n@@ -527,23 +527,16 @@\n otorista\n- = null\n ;%0A    pr\n@@ -562,15 +562,8 @@\n eiro\n- = null\n ;%0A%0A \n@@ -1652,33 +1652,32 @@\n r: %22 + motorista\n- \n + %22, Passenger: \n"
+        },
+        {
+            "label": "2024-12-09_18-30-58",
+            "content": "@@ -520,24 +520,31 @@\n oa motorista\n+ = null\n ;%0A    privat\n@@ -562,16 +562,23 @@\n ssageiro\n+ = null\n ;%0A%0A    p\n"
+        },
+        {
+            "label": "2024-12-09_18-42-49",
+            "content": "@@ -1880,18 +1880,16 @@\n otorista\n-.t\n  + %22, Pa\n@@ -1915,19 +1915,8 @@\n eiro\n-.toString()\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-09_18-43-29",
+            "content": "@@ -1882,17 +1882,16 @@\n orista.t\n-o\n  + %22, Pa\n"
+        },
+        {
+            "label": "2024-12-09_18-43-40",
+            "content": "@@ -1883,24 +1883,16 @@\n rista.to\n-String()\n  + %22, Pa\n"
+        },
+        {
+            "label": "2024-12-09_18-43-55",
+            "content": "@@ -611,48 +611,8 @@\n ) %7B%0A\n-        System.out.println(%22kkdasofk%22);%0A\n     \n@@ -1872,32 +1872,43 @@\n r: %22 + motorista\n+.toString()\n  + %22, Passenger:\n@@ -1914,32 +1914,43 @@\n : %22 + passageiro\n+.toString()\n ;%0A    %7D%0A%7D%0A%0Aclass\n"
+        },
+        {
+            "label": "2024-12-09_18-52-49",
+            "content": "@@ -603,24 +603,64 @@\n otorista) %7B%0A\n+        System.out.println(%22kkdasofk%22);%0A\n         this\n@@ -2123,19 +2123,26 @@\n     \n-Pessoa p = \n+moto.setMotorista(\n new \n@@ -2164,36 +2164,8 @@\n ney)\n-;%0A        moto.setMotorista(\n );%0A \n"
+        },
+        {
+            "label": "2024-12-09_18-53-30",
+            "content": "@@ -2141,17 +2141,16 @@\n torista(\n-p\n );%0A    %7D\n"
+        },
+        {
+            "label": "2024-12-09_18-53-40",
+            "content": "@@ -611,48 +611,8 @@\n ) %7B%0A\n-        System.out.println(%22kkdasofk%22);%0A\n     \n@@ -2083,26 +2083,19 @@\n     \n-moto.setMotorista(\n+Pessoa p = \n new \n@@ -2105,32 +2105,61 @@\n soa(nome, money)\n+;%0A        moto.setMotorista(p\n );%0A    %7D%0A%0A    pu\n"
+        },
+        {
+            "label": "2024-12-09_18-53-57",
+            "content": "@@ -603,24 +603,64 @@\n otorista) %7B%0A\n+        System.out.println(%22kkdasofk%22);%0A\n         this\n@@ -1978,17 +1978,16 @@\n apter %7B%0A\n-%0A\n     priv\n@@ -2115,42 +2115,8 @@\n ) %7B%0A\n-        System.out.println(%22OF%22);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_18-54-40",
+            "content": "@@ -2064,32 +2064,66 @@\n e, int money) %7B%0A\n+        System.out.println(%22OF%22);%0A\n         moto.set\n@@ -2810,17 +2810,16 @@\n setDrive\n-r\n %22))%7Badp.\n"
+        },
+        {
+            "label": "2024-12-09_18-55-19",
+            "content": "@@ -1389,27 +1389,8 @@\n e%22);\n-%0A        custo = 0;\n %0A%0A  \n"
+        },
+        {
+            "label": "2024-12-09_18-56-11",
+            "content": "@@ -1271,31 +1271,8 @@\n ney(\n-motorista.getMoney() + \n cust\n"
+        },
+        {
+            "label": "2024-12-09_18-56-47",
+            "content": "@@ -1362,35 +1362,8 @@\n o);%0A\n-        passageiro = null;%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_18-57-20",
+            "content": "@@ -1350,32 +1350,59 @@\n ney() - custo);%0A\n+        passageiro = null;%0A\n         System.o\n@@ -1440,35 +1440,8 @@\n %22);%0A\n-        passageiro = null;%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_18-57-39",
+            "content": "@@ -1159,39 +1159,8 @@\n %22);%0A\n-            passageiro = null;%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_19-06-19",
+            "content": "@@ -1151,24 +1151,55 @@\n gh money%22);%0A\n+            passageiro = null;%0A\n             \n@@ -1245,39 +1245,8 @@\n %22);%0A\n-            passageiro = null;%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_19-06-40",
+            "content": "@@ -1033,39 +1033,16 @@\n etMoney(\n-motorista.getMoney() + \n custo);%0A\n@@ -1214,31 +1214,8 @@\n %22);%0A\n-            custo = 0;%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_19-07-09",
+            "content": "import java.util.Scanner;\n\nclass Pessoa {\n    private String name;\n    private int money;\n\n    public Pessoa(String name, int money) {\n        this.name = name;\n        setMoney(money);\n    }\n\n\n    public int getMoney() {\n        return money;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public void setMoney(int money) {\n        this.money = money;\n    }\n\n    public String toString() {\n        return getName() + \":\" + getMoney();\n    }\n}\n\nclass Moto {\n    private int custo;\n    private Pessoa motorista;\n    private Pessoa passageiro;\n\n    public void setMotorista(Pessoa motorista) {\n        this.motorista = motorista;\n    }\n\n    public void setPassageiro(Pessoa passageiro) {\n        if(motorista == null) {\n            System.out.println(\"fail: nao tem motorista\");\n            return;\n        }\n\n        this.passageiro = passageiro;\n    }\n\n    public void drive(int km) {\n        custo += km;\n    }\n\n    public void leavePass() {\n        if(custo > passageiro.getMoney()) {\n            motorista.setMoney(motorista.getMoney() + custo);\n            passageiro.setMoney(0);\n            System.out.println(\"fail: Passenger does not have enough money\");\n            System.out.println(passageiro + \" leave\");\n            custo = 0;\n            passageiro = null;\n            return;\n        }\n        motorista.setMoney(motorista.getMoney() + custo);\n        passageiro.setMoney(passageiro.getMoney() - custo);\n        System.out.println(passageiro + \" leave\");\n        passageiro = null;\n        custo = 0;\n\n    }\n\n    public String toString() {\n        if(passageiro == null && motorista == null) {\n            return \"Cost: \" + custo + \", Driver: None, Passenger: None\";\n        }\n        if(passageiro == null) {\n            return \"Cost: \" + custo + \", Driver: \" + motorista + \", Passenger: None\";\n        } \n        if(motorista == null) {\n            return \"Cost: \" + custo + \", Driver: None\" + \", Passenger: \" + passageiro;\n        }\n\n        return \"Cost: \" + custo + \", Driver: \" + motorista + \", Passenger: \" + passageiro;\n    }\n}\n\nclass Adapter {\n\n    private Moto moto;\n\n    public Adapter() {\n        moto = new Moto();\n    }\n\n    public void setDriver(String nome, int money) {\n        moto.setMotorista(new Pessoa(nome, money));\n    }\n\n    public void setPass(String nome, int money) {\n        moto.setPassageiro(new Pessoa(nome, money));\n    }\n\n    public void drive(int km) {\n        moto.drive(km);\n    }\n\n    public void leavePass() {\n        moto.leavePass();\n    }\n\n    public void show() {\n        System.out.println(moto);\n    }\n\n}\n\npublic class draft {\n    public static void main(String args[]) {\n        Scanner sc = new Scanner(System.in);\n        Adapter adp = new Adapter();\n\n        while(true) {\n\n            String line = sc.nextLine();\n            String arg[] = line.split(\" \");\n            System.out.println(\"$\" + line);\n\n            if(arg[0].equals(\"setDriver\")){adp.setDriver(arg[1], Integer.parseInt(arg[2]));}\n            else if(arg[0].equals(\"setPass\")){adp.setPass(arg[1], Integer.parseInt(arg[2]));}  \n            else if(arg[0].equals(\"drive\")){adp.drive(Integer.parseInt(arg[1]));}\n            else if(arg[0].equals(\"leavePass\")){adp.leavePass();}  \n            else if(arg[0].equals(\"show\")){adp.show();} \n            else if(arg[0].equals(\"end\")){break;} \n\n        }\n\n        sc.close();\n    }\n}\n\n"
+        }
+    ]
+}

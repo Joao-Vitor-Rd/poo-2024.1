@@ -1,0 +1,16 @@
+{
+    "patches": [
+        {
+            "label": "2024-12-09_11-55-38",
+            "content": "@@ -17,22 +17,21 @@\n d %7B%0A    \n-Double\n+float\n  thickne\n@@ -90,14 +90,13 @@\n ead(\n-Double\n+float\n  thi\n"
+        },
+        {
+            "label": "2024-12-09_12-00-11",
+            "content": "@@ -17,17 +17,17 @@\n d %7B%0A    \n-d\n+D\n ouble th\n@@ -87,17 +87,17 @@\n ic Lead(\n-d\n+D\n ouble th\n"
+        },
+        {
+            "label": "2024-12-09_12-28-21",
+            "content": "public class Lead {\n    double thickness;\n    String hardness;\n    int size;\n\n    public Lead(double thickness, String hardness, int size) {\n        this.thickness = thickness;\n        this.hardness = hardness;\n        this.size = size;\n    }\n\n    public int usagePerSheet() {\n        if(hardness.equals(\"HB\")) {\n            this.size -= 1;\n        }\n        if(hardness.equals(\"2B\")) {\n            this.size -= 2;\n        }\n        if(hardness.equals(\"4B\")) {\n            this.size -= 4;\n        }\n        if(hardness.equals(\"6B\")) {\n            this.size -= 6;\n        }\n        return size;\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2024-12-09_11-55-38",
+            "content": "@@ -19,17 +19,17 @@\n l %7B%0A    \n-D\n+d\n ouble th\n@@ -81,9 +81,9 @@\n cil(\n-D\n+d\n oubl\n@@ -235,16 +235,8 @@\n (tip\n- != null\n ) %7B%0A\n@@ -364,24 +364,24 @@\n int size) %7B%0A\n+\n         if(!\n@@ -382,34 +382,32 @@\n   if(!hasGrafite\n-()\n ) %7B%0A            \n"
+        },
+        {
+            "label": "2024-12-09_12-00-11",
+            "content": "@@ -419,19 +419,20 @@\n      if(\n-tip\n+lead\n .thickne\n@@ -1097,27 +1097,28 @@\n %0A        if(\n-tip\n+lead\n .size %3C= 10)\n@@ -1219,27 +1219,28 @@\n %0A        if(\n-tip\n+lead\n .size == 10)\n@@ -1341,19 +1341,20 @@\n      if(\n-tip\n+lead\n .size %3E \n@@ -1529,19 +1529,20 @@\n + %22%5B%22 + \n-tip\n+lead\n .thickne\n@@ -1561,19 +1561,20 @@\n       + \n-tip\n+lead\n .hardnes\n@@ -1583,19 +1583,20 @@\n + %22:%22 + \n-tip\n+lead\n .size + \n"
+        },
+        {
+            "label": "2024-12-09_12-02-57",
+            "content": "@@ -110,34 +110,32 @@\n    if(hasGrafite\n-()\n ) %7B%0A            \n@@ -330,22 +330,21 @@\n  insert(\n-Double\n+float\n  thickne\n@@ -1367,19 +1367,20 @@\n         \n-tip\n+lead\n .usagePe\n"
+        },
+        {
+            "label": "2024-12-09_12-04-36",
+            "content": "@@ -473,27 +473,35 @@\n         \n-Lead tip = \n+this.pencil.insert(\n new Lead\n@@ -527,16 +527,17 @@\n s, size)\n+)\n ;%0A      \n@@ -546,32 +546,49 @@\n         return;%0A\n+                %0A\n             %7D%0A  \n"
+        },
+        {
+            "label": "2024-12-09_12-06-15",
+            "content": "@@ -493,16 +493,41 @@\n ew Lead(\n+thickness, hardness, size\n );%0A     \n"
+        },
+        {
+            "label": "2024-12-09_12-06-58",
+            "content": "@@ -469,24 +469,29 @@\n             \n+Lead \n tip = new Le\n@@ -497,33 +497,8 @@\n ead(\n-thickness, hardness, size\n );%0A \n"
+        },
+        {
+            "label": "2024-12-09_12-07-56",
+            "content": "@@ -478,16 +478,20 @@\n    tip =\n+ new\n  Lead(th\n"
+        },
+        {
+            "label": "2024-12-09_12-10-43",
+            "content": "@@ -336,17 +336,51 @@\n ert(\n-Lead lead\n+Double thickness, String hardness, int size\n ) %7B%0A\n@@ -439,17 +439,16 @@\n ness\n- == lead.\n+.equals(\n thic\n@@ -445,32 +445,33 @@\n quals(thickness)\n+)\n  %7B%0A             \n@@ -483,12 +483,39 @@\n p = \n-l\n+L\n ead\n+(thickness, hardness, size)\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-09_12-15-50",
+            "content": "@@ -1367,34 +1367,8 @@\n ) %7B%0A\n-        if(tip != null) %7B%0A\n     \n@@ -1503,83 +1503,8 @@\n %5D%22;%0A\n-        %7D%0A        return %22calibre: %22 + this.thickness + %22, grafite: null%22;%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_12-18-30",
+            "content": "@@ -100,33 +100,32 @@\n s) %7B%0A        if(\n-!\n hasGrafite()) %7B%0A\n"
+        },
+        {
+            "label": "2024-12-09_12-19-34",
+            "content": "@@ -108,16 +108,17 @@\n      if(\n+!\n hasGrafi\n@@ -403,17 +403,17 @@\n ickness \n-!\n+=\n = lead.t\n@@ -444,56 +444,18 @@\n     \n-System.out.println(%22fail: calibre incompativel%22)\n+tip = lead\n ;%0A  \n@@ -498,34 +498,72 @@\n             \n-tip = lead\n+System.out.println(%22fail: calibre incompativel%22)\n ;%0A          \n@@ -645,32 +645,33 @@\n         return;%0A\n+%0A\n     %7D%0A%0A    publi\n"
+        },
+        {
+            "label": "2024-12-09_12-22-40",
+            "content": "@@ -89,32 +89,63 @@\n le thickness) %7B%0A\n+        if(hasGrafite()) %7B%0A    \n         this.thi\n@@ -160,24 +160,34 @@\n  thickness;%0A\n+        %7D%0A\n     %7D%0A    %0A \n"
+        },
+        {
+            "label": "2024-12-09_12-23-06",
+            "content": "@@ -315,16 +315,17 @@\n      if(\n+!\n hasGrafi\n@@ -332,17 +332,8 @@\n te()\n- == false\n ) %7B%0A\n"
+        },
+        {
+            "label": "2024-12-09_12-25-44",
+            "content": "@@ -19,17 +19,17 @@\n l %7B%0A    \n-d\n+D\n ouble th\n@@ -77,17 +77,17 @@\n  Pencil(\n-d\n+D\n ouble th\n@@ -307,33 +307,32 @@\n d) %7B%0A        if(\n-!\n hasGrafite()) %7B%0A\n@@ -319,32 +319,41 @@\n  if(hasGrafite()\n+ == false\n ) %7B%0A            \n"
+        },
+        {
+            "label": "2024-12-09_12-28-21",
+            "content": "@@ -629,19 +629,19 @@\n  public \n-Lea\n+voi\n d remove\n@@ -751,21 +751,16 @@\n   return\n- null\n ;%0A      \n@@ -767,50 +767,8 @@\n   %7D%0A\n-        %0A        Lead removidoLead = tip;%0A\n     \n@@ -801,21 +801,8 @@\n turn\n- removidoLead\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-09_12-52-48",
+            "content": "@@ -348,19 +348,18 @@\n     if(t\n-his\n+ip\n .thickne\n"
+        },
+        {
+            "label": "2024-12-09_12-56-43",
+            "content": "@@ -1035,17 +1035,17 @@\n ip.size \n-=\n+%3C\n = 10) %7B%0A\n@@ -1086,24 +1086,28 @@\n il: \n-folha incompleta\n+tamanho insuficiente\n %22);%0A\n@@ -1156,17 +1156,18 @@\n ip.size \n-%3C\n+==\n  10) %7B%0A \n@@ -1203,36 +1203,32 @@\n (%22fail: \n-tamanho insuficiente\n+folha incompleta\n %22);%0A    \n"
+        },
+        {
+            "label": "2024-12-09_12-58-56",
+            "content": "@@ -1039,9 +1039,10 @@\n ize \n-%3C\n+==\n  10)\n@@ -1086,28 +1086,24 @@\n il: \n-tamanho insuficiente\n+folha incompleta\n %22);%0A\n@@ -1144,34 +1144,33 @@\n     if(tip.size \n-==\n+%3C\n  10) %7B%0A         \n@@ -1198,32 +1198,36 @@\n (%22fail: \n-folha incompleta\n+tamanho insuficiente\n %22);%0A    \n"
+        },
+        {
+            "label": "2024-12-09_12-59-26",
+            "content": "@@ -1036,17 +1036,16 @@\n p.size %3C\n-=\n  10) %7B%0A \n@@ -1139,73 +1139,8 @@\n   %7D%0A\n-        if(tip.size %3E 10) %7B%0A            tip.usagePerSheet();%0A    \n     \n@@ -1168,36 +1168,32 @@\n ) %7B%0A            \n- \n-   \n System.out.print\n@@ -1226,36 +1226,32 @@\n %22);%0A            \n-    \n return;%0A        \n@@ -1242,37 +1242,94 @@\n return;%0A        \n-    %7D\n+%7D%0A        if(tip.size %3E 10) %7B%0A            tip.usagePerSheet();\n %0A            ret\n"
+        },
+        {
+            "label": "2024-12-09_13-00-28",
+            "content": "@@ -1221,17 +1221,18 @@\n ip.size \n-%3C\n+==\n  10) %7B%0A \n"
+        },
+        {
+            "label": "2024-12-09_13-01-42",
+            "content": "@@ -1233,45 +1233,8 @@\n ) %7B%0A\n-                tip.usagePerSheet();%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_13-02-53",
+            "content": "@@ -1225,24 +1225,61 @@\n ize %3C 10) %7B%0A\n+                tip.usagePerSheet();%0A\n             \n"
+        },
+        {
+            "label": "2024-12-09_13-03-27",
+            "content": "@@ -1160,24 +1160,57 @@\n ize %3E 10) %7B%0A\n+            tip.usagePerSheet();%0A\n             \n@@ -1333,41 +1333,8 @@\n   %7D%0A\n-            tip.usagePerSheet();%0A\n     \n"
+        },
+        {
+            "label": "2024-12-09_13-04-43",
+            "content": "@@ -1180,91 +1180,27 @@\n     \n-tip.usagePerSheet();%0A            if(tip.size %3C 10) %7B%0A                tip.size = 10;\n+if(tip.size %3C 10) %7B\n %0A   \n@@ -1288,32 +1288,65 @@\n ;%0A            %7D%0A\n+            tip.usagePerSheet();%0A\n             retu\n"
+        },
+        {
+            "label": "2024-12-09_13-05-59",
+            "content": "public class Pencil {\n    double thickness;\n    Lead tip = null;\n\n    public Pencil(double thickness) {\n        this.thickness = thickness;\n    }\n    \n    public boolean hasGrafite() {\n        if(tip != null) {\n            return true;\n        }\n        return false;\n    }\n\n    public void insert(Lead lead) {\n        if(!hasGrafite()) {\n            if(this.thickness != lead.thickness) {\n                System.out.println(\"fail: calibre incompativel\");\n                return;\n            }\n            tip = lead;\n            return;\n        }\n        System.out.println(\"fail: ja existe grafite\");\n        return;\n    }\n\n    public Lead remove() {\n        if(!hasGrafite()) {\n            System.out.println(\"fail: nao existe grafite\");\n            return null;\n        }\n        \n        Lead removidoLead = tip;\n        tip = null;\n        return removidoLead;\n    }\n\n    public void writePage() {\n        if(!hasGrafite()) {\n            System.out.println(\"fail: nao existe grafite\");\n            return;\n        }\n        if(tip.size <= 10) {\n            System.out.println(\"fail: tamanho insuficiente\");\n            return;\n        }\n        if(tip.size > 10) {\n            tip.usagePerSheet();\n            if(tip.size < 10) {\n                tip.size = 10;\n                System.out.println(\"fail: folha incompleta\");\n                return;\n            }\n            return;\n        }\n    }\n\n    public String toString() {\n        if(tip != null) {\n        return \"calibre: \" + this.thickness + \", grafite: \" + \"[\" + tip.thickness + \":\" \n        + tip.hardness + \":\" + tip.size + \"]\";\n        }\n        return \"calibre: \" + this.thickness + \", grafite: null\";\n    }\n}"
+        }
+    ]
+}
